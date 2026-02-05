@@ -16,7 +16,7 @@ namespace esphome
         {
         public:
             Fujitsu264Climate()
-                : ClimateIR(16.0f, 30.0f, 0.5f, /* supports_dry */ true, /* supports_fan_only */ true,
+                : ClimateIR(kFujitsuAc264MinHeat, kFujitsuAc264MaxTemp, 0.5f, /* supports_dry */ true, /* supports_fan_only */ true,
                             {climate::CLIMATE_FAN_AUTO, climate::CLIMATE_FAN_LOW, climate::CLIMATE_FAN_MEDIUM, climate::CLIMATE_FAN_HIGH, climate::CLIMATE_FAN_QUIET},
                             {climate::CLIMATE_SWING_OFF, climate::CLIMATE_SWING_VERTICAL}) {}
 

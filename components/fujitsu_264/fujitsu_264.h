@@ -21,6 +21,12 @@ namespace esphome
                             {climate::CLIMATE_SWING_OFF, climate::CLIMATE_SWING_VERTICAL}) {}
 
             void setup() override;
+            climate::ClimateTraits traits() override
+            {
+                auto traits = climate_ir::ClimateIR::traits();
+                traits.add_supported_mode(climate::CLIMATE_MODE_AUTO);
+                return traits;
+            }
 
             void set_fan_angle(const uint8_t fan_angle);
             void toggle_powerful();

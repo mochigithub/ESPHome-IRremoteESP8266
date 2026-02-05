@@ -113,7 +113,7 @@ namespace esphome
                 // this->ac_.on() is not needed as it is already handled by the following mode switch
                 switch (this->mode)
                 {
-                case climate::CLIMATE_MODE_HEAT_COOL:
+                case climate::CLIMATE_MODE_AUTO:
                     this->ac_.setMode(kFujitsuAc264ModeAuto);
                     break;
                 case climate::CLIMATE_MODE_HEAT:
